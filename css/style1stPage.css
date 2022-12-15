@@ -1,0 +1,294 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0px; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+main{
+    
+    padding: 50px ;
+   
+
+}
+img{
+    width: 100%;
+}
+
+header{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    width:100%;
+    top:0; right:0;
+    background: #fff;
+    box-shadow: 0 4px 41px rgb(14 15 54 / 14%);
+    padding: 15px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    
+}
+
+/*LOGO STYLE*/
+
+.logo{
+
+    display:flex;
+    
+}
+
+.logo img{
+    
+   width: 120px;
+
+}
+
+/*NAVIGATION BAR STYLE*/
+
+header .navbar ul{
+
+    list-style:none; 
+
+}
+
+header .navbar ul li{
+
+    position: relative;
+    float:left;
+
+}
+
+header .navbar ul li a{
+    font-size: 1rem;
+    padding:10px;
+    color:black;
+    display: block;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+
+header .navbar ul li a:hover{
+    background:rgba(255, 153, 102, .6);
+    color:#fff;
+
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width:200px;
+    background:#fff;
+    display: none;
+
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(255, 153, 102, .6);
+}
+header .navbar ul li:focus-within > ul
+,header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-icon{
+    font-size:24px;
+    cursor: pointer;
+    z-index:1001;
+    display:none;
+}
+
+
+
+.home{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 120px;
+    padding-right:0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background:#fdfcfc;
+    gap:1rem;
+}
+
+.home-img{
+    padding-top: 40px;
+}
+
+.home-text{
+    text-align:center;
+    flex: 1 1 17rem;  
+}
+
+.home-text span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:rgb(255, 153, 102)
+}
+
+.home-text h1{
+    font-size:3.2rem;
+    color:darksalmon;
+    font-weight: bolder;
+}
+
+.home-text h2{
+    font-size:1.8rem;
+    color:lightgrey;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin:0.5rem 0 1.4rem;
+}
+
+/*BUTTON STYLE*/
+
+
+
+.btn{
+    margin:0.5rem 0 1.4rem;
+    padding: 6px 15px;
+    border: 2px solid rgb(255, 153, 102);
+    border-radius:40px;
+    color: lightgray;
+    font-weight: 500;
+    font-family:'Poppins', sans-serif;
+}
+
+.btn:hover{
+    color:rgb(255, 153, 102);
+    background:lightgray;
+}
+
+/*SECOND TITLE (ARE YOU READY FOR...?)*/
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+.heading span{
+    font-family:'Poppins', sans-serif;
+    font-size:2rem;
+    font-weight: 300;
+    color:rgb(255, 153, 102);
+}
+
+.heading h1{
+    font-family:'Poppins', sans-serif;
+    font-size: 2rem;
+    color:grey;
+}
+
+/*BOLO DO CACO AND MACHICO STYLE*/
+
+
+.container{
+   
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;    
+}
+
+.container-background
+{
+background-color:#fdfcfc;
+}
+
+
+.container-text
+{
+    padding-top: 50px;
+    flex:1 1 21rem;
+}
+
+.container-text h1
+{
+    font-family:'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: darksalmon;
+    text-align: center;
+}
+
+.container-text p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:1rem 0 1rem;
+    text-align: justify;   
+}
+
+.img-size{
+    flex: 1 1 21rem;
+    width: 500px;
+    height: 340px;
+}
+
+
+
+
+@media(max-width: 1150px){
+    header{
+        padding: 18px 7%;
+    }
+   
+
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
+        font-size:1.5rem;
+    }
+}
+
+@media(max-width: 991px){
+    header{
+        padding: 18px 4%;
+    }
+    
+}
+
+@media(max-width: 768px){
+    header{
+        padding: 11px 4%;
+    }
+
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:-500%;
+        left:0;
+        right:0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(255, 153, 102);
+        border-top: 2px solid lightgrey;
+        transition: 0.2s;
+        text-align: left;
+    }
+
+    .navbar.active{
+        top:100%;
+    }
+
+    .navbar a{
+        padding: 1.5rem;
+        display:block;
+        color:rgb(255, 153, 102);
+
+    }
+
+}
+
+
+
